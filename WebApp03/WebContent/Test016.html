@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test016.html</title>
+
+<style type="text/css">
+	* {color: #22eeww;}
+	input
+	{
+		font-family: 나눔고딕코딩;
+		font-weight: bold;
+	}
+	input:focus
+	{
+		background-color: #eeeedd;
+	}
+	input.btn
+	{
+		width: 80px;
+		font-weight: bold;
+		font-family: 맑은 고딕;
+	}
+	input.btn:hover
+	{
+		color: orange;
+	}
+	input.btn:active
+	{
+		color: red;
+	}
+
+</style>
+
+<script type="text/javascript">
+
+function test(obj)
+{
+	 var vNum1 = document.getElementById("num1").value;
+	 var vNum2 = document.getElementById("num2").value;
+	 var vResult = 0;
+	 
+	 if (obj.value == "더하기")
+	{
+		vResult = parseInt(vNum1) + parseInt(vNum2);
+	}
+	
+	else if (obj.value == "빼기") 
+	{
+		vResult = parseInt(vNum1) - parseInt(vNum2);
+	}
+	
+	else if (obj.value == "곱하기") 
+	{
+		vResult = parseInt(vNum1) * parseInt(vNum2);
+	}
+	
+	else if (obj.value == "나누기") 
+	{
+		vResult = parseInt(vNum1) / parseInt(vNum2);
+	}
+	
+	document.getElementById("result").value = vResult;
+}
+
+</script>
+
+</head>
+<body>
+
+<div>
+	<h1>자바스크립트 활용</h1>
+	<hr>
+</div>
+
+<div>
+	<p>두 개의 정수를 입력받고</p>
+	<p>합, 차, 곱, 몫을 연산하여 연산 결과를 출력할 수 있도록 한다.</p>
+	<p>HTML, CSS, Javascript 를 활용하여 처리한다.</p>
+</div>
+	
+<div>
+	<form>
+		정수1 <input type="text" id="num1" style="width: 80px;">	
+		정수2 <input type="text" id="num2" style="width: 80px;">	
+		<br><br>
+	
+		<!-- ▶매개변수로 문자열을 넘겨줄때 CSS 코드상에서 『""』가 쓰였기 때문에 
+			 문자열 표기에 『""』를 쓸 수 없다. 
+			 ① 『/"』쌍으로 대체 → /"문자열/"
+			 ② 『''』 로 대체 → '문자열'
+			 ③ 바깥쪽 『""』 『''』 를 바꿔서 쓰는 것도 가능하다. 	 -->
+			 
+		<!-- ▶매개변수로 this 를 넘겨주면 이벤트가 발생한 객체타입을 넘겨준다. 
+			 this.value, this.type 처럼 속성을 넘겨주는 것도 가능하고,
+			 this 채로 넘겨주면 함수 안에서 구별하는 것도 가능하다.
+			 ==> 함수 1개로, 오버로딩 없이 해결 가능! -->
+		<input type="button" class="btn" value="더하기" onclick="test(this)">
+		<input type="button" class="btn" value="빼기" onclick="test(this)">
+		<input type="button" class="btn" value="곱하기" onclick="test(this)">
+		<input type="button" class="btn" value="나누기" onclick="test(this)">
+		<br><br>
+
+		결과 <input type="text" id="result" style="width: 80px;" disabled="disabled">	
+		<input type="reset" class="btn" value="취소">
+	</form>
+</div>
+
+</body>
+</html>

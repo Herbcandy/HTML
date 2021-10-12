@@ -24,22 +24,33 @@
 		
 		<!-- ▶submit : form 안에서 작성된 내용을 서버로 전송하는 유일한 수단 -->
 		<input type="submit" value="전송하기" name="submitBtn">
+		
+		<!-- ▶reset : form 안에서 작성된 내용을 clear -->
+		<!-- ▶아예 무조건 비우는 게 아니라-->
+		<!-- ▶radio, check box는 원래 checked 되어있던 상태로. => 초기화 개념 -->
 		<input type="reset" value="다시쓰기">
 		
+
+		<!-- ==================추가적으로 설명======================== -->		
+		<!-- ▶input에서 type 을 지정하지 않으면 text box가 표현된다. -->
+		<!-- ▶pc데이터 영역: 여는 태그와 닫는 태그사이의 공간 -->
 		
-		<!-- pc데이터 영역: 여는 태그와 닫는 태그사이의 공간 -->
-		<!-- input type 을 지정하지 않으면 text box가 표현된다. -->
+		<!-- ▶아래 두 구문은 표현하는 결과가 같다. -->
+		<input type="button" value="test1">
+		<button type="button">test2</button>
 		
-		<!-- <button type="button">test2</button> -->
-		<!-- <input type="reset" value="test2"> -->
-		<!-- <input type="submit" value="test3"> -->
+		<!-- 차이 : button 은 pc데이터 영역이 있어서 이미지로 버튼을 만들 수 있다. -->
+		<button type="button">
+			<img alt="" src="images/btn_01.png">
+		</button>
+		
+		<!-- ▶아래 세 구문은 표현하는 결과가 같다. -->
 		<button type="submit">test3</button>
 		<input type="submit" value="test4">
-		<!-- button에서 type 을 지정하지 않으면 submit. --> 
 		<button>test5</button>
+		<!-- ▶button에서 type 을 지정하지 않으면 submit. --> 
+
 		<br><br>
-		
-		
 		
 	</form>
 </div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test012.html</title>
+
+<script type="text/javascript">
+	
+	message = "<h1>Hello~ </h1>";
+	document.write(message);
+	
+	alert(message);	
+	// ▶<h1> 태그 미적용.
+	// ▶경고창이 먼저 뜨고 그 후 본문 내용이 뜬다.
+	
+</script>
+
+<script type="text/javascript" src="js/alertTest.js"></script>
+<!-- ▶ <script> 태그는 여러번 사용 가능하며,
+  		src로 첨부한 js파일에는 message 변수가 들어있지 않는데 경고창에 message 문구가 출력! 
+ 		==> 각각 선언된 script 태그라도 script영역으로 동일. 변수등을 공유한다. -->
+ 		
+<script type="text/javascript">
+	
+	// Date 내장 객체 : 현재 시스템의 날짜와 시간
+	// var dt = Date().toString();
+	var dt = String(Date());
+	document.write(dt);
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

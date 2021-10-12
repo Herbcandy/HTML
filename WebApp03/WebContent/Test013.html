@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test013.html</title>
+
+<script type="text/javascript">
+
+	<!-- 이벤트 등록 방법 ② -->
+	document.onload = windowOnload();
+
+	/* ▶ 함수 생성구문이므로 인터프리터에 의해 실행되는 구문이 아니다. 
+	   ▶ 함수 호출이 필요 => 페이지가 열릴때마다 함수를 호출해야함. */
+	function windowOnload()
+	{
+		alert("경고창!");
+	}
+
+</script>
+
+</head>
+<!-- 이벤트 등록 방법 ① -->
+<!-- <body onload="windowOnload()"> -->
+<body>
+<h1>윤유동</h1>
+<h2>배고프다</h2>
+<h3>졸리다</h3>
+
+</body>
+</html>

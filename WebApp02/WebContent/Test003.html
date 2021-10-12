@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test003.html</title>
+
+<style type="text/css">
+
+	p { color: green; font-size: 16pt; font-weight: bold; }
+	/* 아래 p.class타입은 p 태그가 지정한 스타일은 기본으로 적용이 되고, 
+	충돌이 되는 부분은 오버라이딩 되서 적용된다. */ 
+	p.type1 { color: yellow;}
+	p.type2 { color: blue;}
+	/* 태그에 관계없이 클래스에 대해서만 스타일 적용도 가능 */
+	.type3 { color: black; font-size: 27pt; }
+</style>
+
+</head>
+<body>
+
+<div>
+	<h1>class 를 선택자로 활용</h1>
+	<hr>
+</div>
+
+<div>
+	<p>그냥 p 태그만 페이지에 적용할 경우 이렇게 확인된다.</p>
+	<p class="type1">하지만, 클래스를 사용할 경우 이렇게 확인된다.</p>
+	<p class="type2">또한, 다른 클래스를 사용할 경우 이렇게 확인된다.</p>
+	<p class="type1">여기서는 이렇게</p>
+	<p class="type2">저기서는 저렇게</p>
+	<p class="type3">거기서는 그렇게</p>
+	<span class="type3">span 태그 영역에서는 이렇게</span>
+</div>
+
+</body>
+</html>
