@@ -13,6 +13,48 @@
 	.txt {text-align: right;}
 </style>
 
+<script type="text/javascript">
+
+function myCalc()
+{
+	var money = parseInt(document.getElementById("money").value);
+	
+	document.getElementById("totalMoney").value = money;
+	
+	var m500 = parseInt(money/500); 
+	// var m500 = Math.floor(money/500);
+	//				   ----- 소수점자리 절삭 -> 정수만 취한다
+
+	/* 	
+		확인
+		alert(m500);
+	
+		alert(parseInt(123.456));
+		alert(Math.floor(123.456));
+	 */
+	money = money % 500;
+	
+	var m100 = parseInt(money/100);
+	money = money % 100;
+	
+	var m50 = parseInt(money/50);
+	money = money % 50;
+	
+	var m10 = parseInt(money/10);
+	
+	document.getElementById("m500").value = m500;
+	document.getElementById("m100").value = m100;
+	document.getElementById("m50").value = m50;
+	document.getElementById("m10").value = m10;
+	
+	
+	
+	
+}
+
+
+</script>
+
 </head>
 <body>
 
@@ -56,7 +98,7 @@
 			</tr>
 			<tr>
 				<td colspan="3">
-					<input type="button" value="결과" class="btn">
+					<input type="button" value="결과" class="btn" onclick="myCalc()">
 					<input type="reset" value="취소" class="btn">
 				</td>
 			</tr>
