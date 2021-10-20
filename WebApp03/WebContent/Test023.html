@@ -99,9 +99,40 @@
 		} while (true);
 	 	
 	 	// 석차(등수) 계산
+	 	for (var i = 0; i < arr[0].length; i++)
+		{
+			for (var j = 0; j < arr[0].length; j++)
+			{
+				if (i==j)
+					continue;
+
+				if (Number(arr[4][i]) < Number(arr[4][j]))	// 총점 비교	//
+				{                                                       	//
+					// i번째 학생의 등수를 1만큼 증가                   	// continue 기준 뒷부분
+					arr[5][i] = (Number(arr[5][j]) + 1).toString();     	//
+				}                                                       	//
+			}
+		}
 	 	
+	 	// ------------여기까지 수행하면 arr 배열 구성 끝.
+		var result = "";
 	 	
+	 	for (var j = 0; j < arr[0].length; j++)
+		{
+			for (var k = 0; k < arr.length; k++)
+			{
+				// 전체 요소 출력 확인
+				//alert(k + "," + j);
+				
+				result += arr[k][j] + "\t";
+			}
+			result += "\n";
+		}
 	 	
+	 	document.getElementById("txtCount").value = arr[0].length;
+	 	
+	 	document.getElementById("memberList").value = " 이름	국어	영어	수학	총점	등수\n";
+	 	document.getElementById("memberList").value += result ;
 	}
 	
 </script>
